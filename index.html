@@ -9,7 +9,7 @@
     body { font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; color: #0f172a; margin: 0; padding: 12px; line-height: 1.5; }
     .wrap { max-width: 1060px; margin: auto; }
     .box { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
-    h1, h2, h3 { margin-top: 0; color: #0f766e; }
+    h1, h2, h3, h4 { margin-top: 0; color: #0f766e; }
     .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
     .tab-btn { background: #e2e8f0; color: #0f172a; border: none; padding: 9px 13px; border-radius: 7px; cursor: pointer; font-weight: bold; }
     .tab-btn.active { background: #0f766e; color: #ffffff; }
@@ -24,15 +24,17 @@
     .msg.ai { background: #dcfce7; }
     .msg-text { white-space: pre-wrap; }
     .copy-mini { margin-top: 6px; background: #1e293b; color: #fff; font-size: 12px; padding: 4px 10px; border-radius: 5px; border: none; cursor: pointer; }
-    .row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     input[type="text"], textarea, select { width: 100%; padding: 9px; border: 1px solid #94a3b8; border-radius: 6px; font-family: inherit; font-size: 14px; }
     .flex-grow { flex: 1; min-width: 190px; }
     button { background: #0f766e; color: #fff; border: none; padding: 9px 14px; border-radius: 6px; cursor: pointer; font-weight: bold; }
     button.gray { background: #475569; }
     button.green { background: #15803d; }
+    button.amber { background: #b45309; }
     button.red { background: #b91c1c; }
     .approval { border: 1px dashed #d97706; background: #fffbeb; border-radius: 8px; padding: 10px; margin-bottom: 8px; }
     .demo-card { border: 1px solid #99f6e4; background: #f0fdfa; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+    .pricing-box { border: 1px solid #cbd5e1; background: #f8fafc; border-radius: 8px; padding: 12px; margin-top: 10px; }
     .plan-list { margin: 8px 0 0; padding-right: 18px; }
     .plan-list li { margin-bottom: 6px; }
     table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
@@ -46,7 +48,7 @@
   <div class="wrap">
     <div class="box">
       <h1>مكتب الذكاء الاصطناعي والعملاء (ملف واحد متكامل)</h1>
-      <p>تشغيل مباشر عبر <strong>text.pollinations.ai</strong> بردود عملية مختصرة، زر نسخ سريع، صندوق اعتماد، رسالة عملاء وواتساب، قائمة عملاء مع تصدير CSV، ونماذج عرض جاهزة.</p>
+      <p>تشغيل مباشر عبر <strong>text.pollinations.ai</strong> بردود عملية مختصرة، زر نسخ سريع، صندوق اعتماد، رسائل عرض ومتابعة وباقات أسعار جاهزة، قائمة عملاء مع تصدير CSV، ونماذج عرض.</p>
       <div class="tabs">
         <button class="tab-btn active" data-tab="officeTab">1. المكتب والموظفون</button>
         <button class="tab-btn" data-tab="approvalsTab">2. صندوق الموافقة</button>
@@ -65,7 +67,7 @@
         <h3 id="currentAgentHeading">المحادثة مع: رامي — مدير العمليات</h3>
         <div class="chat-box" id="chatBox"></div>
         <div class="row">
-          <input type="text" id="taskInput" class="flex-grow" placeholder="اكتب المهمة هنا... مثال: صغ خطة سريعة لمتابعة 10 عيادات ومختبرات" />
+          <input type="text" id="taskInput" class="flex-grow" placeholder="اكتب المهمة هنا... مثال: اكتب رد مقنع لعميل يسأل عن فائدة الموقع" />
           <button id="sendTaskBtn">إرسال المهمة</button>
           <button id="sendAllBtn" class="gray">إرسال للفريق</button>
           <button id="resetDataBtn" class="gray">مسح السجل</button>
@@ -84,23 +86,25 @@
     <!-- 3. عرض العملاء وواتساب -->
     <div id="salesTab" class="section">
       <div class="box">
-        <h3>مولّد رسالة واتساب وعرض سريع للعملاء</h3>
+        <h3>مولّد رسائل العرض والمتابعة وواتساب</h3>
         <div class="row" style="margin-bottom:8px;">
-          <input type="text" id="clientName" class="flex-grow" placeholder="اسم المنشأة أو العميل (مثال: مكتب المهيوبـي)" />
-          <input type="text" id="demoLink" class="flex-grow" placeholder="رابط المعاينة التجريبية (مثال: https://appi37oufxahjen61dp.teable.app)" />
+          <input type="text" id="clientName" class="flex-grow" placeholder="اسم المنشأة المستهدفة (مثال: مختبر الشفاء)" />
+          <input type="text" id="targetPhone" class="flex-grow" placeholder="رقم واتساب العميل (مثال: 96777xxxxxxx)" />
+          <input type="text" id="demoLink" class="flex-grow" placeholder="رابط المعاينة (افتراضي: نموذج مكتب المهيوبـي)" />
         </div>
         <div class="row" style="margin-bottom:10px;">
-          <button id="generatePitchBtn">توليد الرسالة المخصصة</button>
-          <button type="button" class="gray" onclick="loadPresetDemo('مكتب المهيوبـي', 'https://appi37oufxahjen61dp.teable.app')">تحميل نموذج مكتب المهيوبـي</button>
+          <button id="generatePitchBtn">1. رسالة العرض الأول</button>
+          <button id="generateFollowupBtn" type="button" class="amber">2. رسالة متابعة بعد 48 ساعة</button>
+          <button id="generatePricingBtn" type="button" class="gray">3. عرض باقات الأسعار</button>
         </div>
-        <textarea id="pitchOutput" rows="10">السلام عليكم ورحمة الله وبركاته أستاذ/دكتور [اسم المنشأة] 👋
+        <textarea id="pitchOutput" rows="11">السلام عليكم ورحمة الله وبركاته أستاذ/دكتور [اسم المنشأة] 👋
 
 جهّزنا معاينة رقمية تفاعلية سريعة وخفيفة مخصصة لـ [اسم المنشأة] تعمل على جميع الهواتف بدون تحميل أي تطبيق، وتساعدكم على:
 • عرض الخدمات والأقسام بوضوح يرفع ثقة الزوار.
 • الرد السريع على الاستفسارات وتوجيه الزائر لطلب الحجز مباشرة عبر واتساب.
 • تنظيم طلبات العملاء وتقليل ضغط الاستقبال.
 
-🔗 رابط المعاينة التجريبية: [الرابط]
+🔗 رابط المعاينة التجريبية: https://appi37oufxahjen61dp.teable.app
 
 يمكن تفعيل نسخة تجريبية مجانية لمدة 7 أيام باسم منشأتكم لتجربتها عملياً. هل يناسبكم إرسال تفاصيل الباقة؟
 
@@ -108,18 +112,19 @@
 واتساب: 00967737219181 | البريد: omarebrah2060@gmail.com</textarea>
         <div class="row" style="margin-top:8px;">
           <button id="copyPitchBtn" class="green">نسخ الرسالة</button>
-          <a id="waLinkBtn" target="_blank" style="text-decoration:none;"><button type="button">فتح واتساب مباشرة</button></a>
+          <a id="waClientBtn" target="_blank" style="text-decoration:none;"><button type="button">إرسال للعميل عبر واتساب</button></a>
+          <a id="waSelfBtn" target="_blank" style="text-decoration:none;"><button type="button" class="gray">إرسال نسخة لواتسابي (00967737219181)</button></a>
         </div>
       </div>
 
       <div class="box">
         <h3>خطة عملية من 5 خطوات لجلب أول 5 عملاء هذا الأسبوع</h3>
         <ol class="plan-list">
-          <li><strong>تجهيز الرابط النموذجي الجاهز:</strong> استخدام نموذج مثل <strong>مكتب المهيوبـي</strong> (<code>https://appi37oufxahjen61dp.teable.app</code>) كمعاينة حية توضح للعميل شكل التجربة ووضوحها قبل أن يدفع أي مبلغ.</li>
+          <li><strong>تجهيز الرابط النموذجي الجاهز:</strong> استخدام نموذج <strong>مكتب المهيوبـي</strong> (<code>https://appi37oufxahjen61dp.teable.app</code>) كمعاينة حية توضح للعميل شكل التجربة ووضوحها قبل أن يدفع أي مبلغ.</li>
           <li><strong>اختيار 15 منشأة مستهدفة:</strong> جمع أسماء وأرقام واتساب لعيادات، مختبرات، مكاتب سفر وخدمات، أو مدارس تفتقر لواجهة تفاعلية سريعة أو حجز مباشر.</li>
           <li><strong>إرسال عرض مخصص ومختصر:</strong> إرسال رسالة واتساب باسم المنشأة مع رابط المعاينة واقتراح تجربة مجانية لمدة 7 أيام لتقليل التردد.</li>
-          <li><strong>متابعة سريعة بعد 24 إلى 48 ساعة:</strong> إرسال متابعة قصيرة لمن شاهد الرسالة أو فتح الرابط دون رد، وتثبيت حالته في جدول العملاء.</li>
-          <li><strong>إغلاق أول 5 صفقات برسوم واضحة:</strong> تقديم باقة تأسيس بسيطة أو اشتراك شهري ميسّر مع تسليم سريع وتحصيل عائد مستقل يدعم معيشتك ومشروعك.</li>
+          <li><strong>متابعة سريعة بعد 24 إلى 48 ساعة:</strong> استخدام زر <em>«رسالة متابعة بعد 48 ساعة»</em> لمن لم يرد، وتحديث حالته في جدول العملاء.</li>
+          <li><strong>إغلاق أول 5 صفقات برسوم واضحة:</strong> إرسال عرض باقات الأسعار الميسّر مع تسليم سريع وتحصيل عائد مستقل يدعم معيشتك ومشروعك.</li>
         </ol>
       </div>
     </div>
@@ -129,7 +134,10 @@
       <div class="box">
         <h3>كيف يعمل النظام وأنت قافل هاتفك؟</h3>
         <p>ملف <strong>index.html</strong> يعمل في المتصفح عندما تفتحه، أما التشغيل التلقائي والهاتف مغلق فيتم عبر جدولة سحابية (مثل <strong>GitHub Actions</strong>) تستدعي <code>text.pollinations.ai</code> وتخزن النتائج في المستودع لتجدها جاهزة عند فتح هاتفك.</p>
-        <pre>name: Auto AI Office Task
+        <div class="row" style="margin-bottom:8px;">
+          <button type="button" id="copyWorkflowBtn" class="green">نسخ كود GitHub Actions</button>
+        </div>
+        <pre id="workflowCode">name: Auto AI Office Task
 on:
   schedule:
     - cron: "0 6 * * *" # كل يوم الساعة 06:00 UTC
@@ -154,7 +162,7 @@ jobs:
         <h3>إدارة قائمة العملاء المحتملين وحالة التواصل</h3>
         <div class="row" style="margin-bottom:8px;">
           <input type="text" id="leadName" class="flex-grow" placeholder="اسم المنشأة أو العميل" />
-          <input type="text" id="leadPhone" class="flex-grow" placeholder="رقم واتساب (مثال: 9677...)" />
+          <input type="text" id="leadPhone" class="flex-grow" placeholder="رقم واتساب العميل (مثال: 9677...)" />
           <input type="text" id="leadDemo" class="flex-grow" placeholder="رابط المعاينة (اختياري)" />
           <select id="leadStatus" style="width:auto;">
             <option value="جديد">جديد</option>
@@ -193,7 +201,7 @@ jobs:
             <a href="https://appi37oufxahjen61dp.teable.app" target="_blank" style="text-decoration:none;">
               <button type="button">فتح المعاينة</button>
             </a>
-            <button type="button" class="green" onclick="loadPresetDemo('مكتب المهيوبـي', 'https://appi37oufxahjen61dp.teable.app')">استخدام في رسالة العميل</button>
+            <button type="button" class="green" onclick="loadPresetDemo('مكتب المهيوبـي', 'https://appi37oufxahjen61dp.teable.app', '')">استخدام في رسالة العميل</button>
           </div>
         </div>
       </div>
@@ -205,6 +213,9 @@ jobs:
   </div>
 
   <script>
+    const MY_WHATSAPP = "967737219181";
+    const DEFAULT_DEMO = "https://appi37oufxahjen61dp.teable.app";
+
     const AGENTS = [
       {
         id: "manager",
@@ -236,7 +247,7 @@ jobs:
       }
     ];
 
-    const STORAGE_KEY = "single_file_ai_office_v3";
+    const STORAGE_KEY = "single_file_ai_office_v4";
     let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"chats":{},"approvals":[],"leads":[]}');
     if (!Array.isArray(state.leads)) state.leads = [];
     let selectedAgent = AGENTS[0];
@@ -406,7 +417,14 @@ jobs:
       renderApprovals();
     };
 
-    // 3. عرض العملاء وواتساب + 6. نماذج العروض
+    // 3. قوالب الرسائل وأزرار الواتساب
+    function getClientInputs() {
+      const name = document.getElementById("clientName").value.trim() || "منشأتكم الموقرة";
+      const link = document.getElementById("demoLink").value.trim() || DEFAULT_DEMO;
+      const phone = document.getElementById("targetPhone").value.trim();
+      return { name, link, phone };
+    }
+
     function buildPitchText(name, link) {
       return `السلام عليكم ورحمة الله وبركاته أستاذ/دكتور ${name} 👋
 
@@ -423,35 +441,83 @@ jobs:
 واتساب: 00967737219181 | البريد: omarebrah2060@gmail.com`;
     }
 
-    function updateWaLink(phoneDigits) {
+    function buildFollowupText(name, link) {
+      return `السلام عليكم ورحمة الله وبركاته أستاذ/دكتور ${name} 👋
+
+متابعة سريعة بخصوص المعاينة الرقمية التفاعلية التي أرسلناها لـ ${name} (${link}).
+يسعدنا تفعيل النسخة التجريبية المجانية لمدة 7 أيام باسم منشأتكم هذا الأسبوع لتشاهدوا تفاعل العملاء وسهولة الحجز عبر واتساب.
+
+هل تحبون أن أجهّزها لكم اليوم؟
+
+المطور الأستاذ عمر حسان عبره
+واتساب: 00967737219181`;
+    }
+
+    function buildPricingText(name) {
+      return `تفاصيل باقات الواجهة التفاعلية الذكية والحجز السريع لـ ${name}:
+
+1️⃣ الباقة التجريبية (مجاناً لمدة 7 أيام):
+• تجهيز واجهة معاينة باسم منشأتكم وربطها برقم واتساب الحجوزات.
+
+2️⃣ باقة التأسيس السريع (دفعة واحدة ميسّرة):
+• تصميم واجهة متكاملة بأقسامكم وخدماتكم وأوقات الدوام.
+• ربط مباشر بالحجز عبر واتساب + استضافة سريعة تعمل على أضعف الهواتف.
+
+3️⃣ الباقة المتكاملة + المتابعة الذكية:
+• كل مزايا باقة التأسيس + مساعد ذكي للرد الفوري على استفسارات الزوار وتحديثات مستمرة.
+
+للاعتماد والبدء بالتنفيذ خلال 24 ساعة، تواصلوا معنا مباشرة:
+المطور الأستاذ عمر حسان عبره
+واتساب: 00967737219181 | البريد: omarebrah2060@gmail.com`;
+    }
+
+    function updateWaLinks() {
       const txt = document.getElementById("pitchOutput").value;
-      const cleanPhone = (phoneDigits || "").replace(/\D/g, "");
-      document.getElementById("waLinkBtn").href = cleanPhone
-        ? `https://wa.me/${cleanPhone}?text=${encodeURIComponent(txt)}`
+      const cleanClientPhone = document.getElementById("targetPhone").value.replace(/\D/g, "");
+      document.getElementById("waClientBtn").href = cleanClientPhone
+        ? `https://wa.me/${cleanClientPhone}?text=${encodeURIComponent(txt)}`
         : `https://wa.me/?text=${encodeURIComponent(txt)}`;
+      document.getElementById("waSelfBtn").href = `https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent(txt)}`;
     }
 
     window.loadPresetDemo = function (name, link, phone) {
       document.getElementById("clientName").value = name;
       document.getElementById("demoLink").value = link;
+      document.getElementById("targetPhone").value = phone || "";
       document.getElementById("pitchOutput").value = buildPitchText(name, link);
-      updateWaLink(phone || document.getElementById("leadPhone").value);
+      updateWaLinks();
       switchTab("salesTab");
     };
 
     document.getElementById("generatePitchBtn").onclick = () => {
-      const name = document.getElementById("clientName").value.trim() || "منشأتكم الموقرة";
-      const link = document.getElementById("demoLink").value.trim() || "https://appi37oufxahjen61dp.teable.app";
+      const { name, link } = getClientInputs();
       document.getElementById("pitchOutput").value = buildPitchText(name, link);
-      updateWaLink(document.getElementById("leadPhone").value);
+      updateWaLinks();
+    };
+
+    document.getElementById("generateFollowupBtn").onclick = () => {
+      const { name, link } = getClientInputs();
+      document.getElementById("pitchOutput").value = buildFollowupText(name, link);
+      updateWaLinks();
+    };
+
+    document.getElementById("generatePricingBtn").onclick = () => {
+      const { name } = getClientInputs();
+      document.getElementById("pitchOutput").value = buildPricingText(name);
+      updateWaLinks();
     };
 
     document.getElementById("copyPitchBtn").onclick = () => {
       copyTextValue(document.getElementById("pitchOutput").value);
     };
 
-    document.getElementById("pitchOutput").addEventListener("input", () => updateWaLink());
-    updateWaLink();
+    document.getElementById("copyWorkflowBtn").onclick = () => {
+      copyTextValue(document.getElementById("workflowCode").textContent);
+    };
+
+    document.getElementById("pitchOutput").addEventListener("input", updateWaLinks);
+    document.getElementById("targetPhone").addEventListener("input", updateWaLinks);
+    updateWaLinks();
 
     // 5. قائمة العملاء المحتملين + تصدير CSV
     function renderLeads() {
@@ -483,7 +549,7 @@ jobs:
     document.getElementById("addLeadBtn").onclick = () => {
       const name = document.getElementById("leadName").value.trim();
       const phone = document.getElementById("leadPhone").value.trim();
-      const demo = document.getElementById("leadDemo").value.trim() || "https://appi37oufxahjen61dp.teable.app";
+      const demo = document.getElementById("leadDemo").value.trim() || DEFAULT_DEMO;
       const status = document.getElementById("leadStatus").value;
       if (!name) return;
       state.leads.unshift({ name, phone, demo, status });
@@ -526,7 +592,7 @@ jobs:
     window.prepareLeadPitch = function (idx) {
       const lead = state.leads[idx];
       if (!lead) return;
-      window.loadPresetDemo(lead.name, lead.demo || "https://appi37oufxahjen61dp.teable.app", lead.phone);
+      window.loadPresetDemo(lead.name, lead.demo || DEFAULT_DEMO, lead.phone);
     };
 
     renderTeam();
