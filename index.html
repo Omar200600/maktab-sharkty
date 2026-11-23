@@ -7,7 +7,7 @@
   <style>
     * { box-sizing: border-box; }
     body { font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; color: #0f172a; margin: 0; padding: 12px; line-height: 1.5; }
-    .wrap { max-width: 1060px; margin: auto; }
+    .wrap { max-width: 1080px; margin: auto; }
     .box { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
     h1, h2, h3, h4 { margin-top: 0; color: #0f766e; }
     .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
@@ -15,10 +15,12 @@
     .tab-btn.active { background: #0f766e; color: #ffffff; }
     .section { display: none; }
     .section.active { display: block; }
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 10px; margin-bottom: 12px; }
+    .quick-box { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+    .auth-banner { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 13px; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 12px; }
     .emp-card { border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px; background: #f8fafc; cursor: pointer; }
     .emp-card.selected { border: 2px solid #0f766e; background: #f0fdfa; }
-    .chat-box { height: 260px; overflow-y: auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+    .chat-box { height: 250px; overflow-y: auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
     .msg { padding: 8px 10px; border-radius: 6px; margin-bottom: 8px; font-size: 14px; }
     .msg.user { background: #dbeafe; white-space: pre-wrap; }
     .msg.ai { background: #dcfce7; }
@@ -34,7 +36,6 @@
     button.red { background: #b91c1c; }
     .approval { border: 1px dashed #d97706; background: #fffbeb; border-radius: 8px; padding: 10px; margin-bottom: 8px; }
     .demo-card { border: 1px solid #99f6e4; background: #f0fdfa; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
-    .pricing-box { border: 1px solid #cbd5e1; background: #f8fafc; border-radius: 8px; padding: 12px; margin-top: 10px; }
     .plan-list { margin: 8px 0 0; padding-right: 18px; }
     .plan-list li { margin-bottom: 6px; }
     table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
@@ -48,26 +49,40 @@
   <div class="wrap">
     <div class="box">
       <h1>مكتب الذكاء الاصطناعي والعملاء (ملف واحد متكامل)</h1>
-      <p>تشغيل مباشر عبر <strong>text.pollinations.ai</strong> بردود عملية مختصرة، زر نسخ سريع، صندوق اعتماد، رسائل عرض ومتابعة وباقات أسعار جاهزة، قائمة عملاء مع تصدير CSV، ونماذج عرض.</p>
+      <p>تشغيل مباشر عبر <strong>text.pollinations.ai</strong> بردود عملية مختصرة، تنفيذ فوري للمواقف، استقبال آلي حسب الحاجة والمنطقة، روتين تقليل الجهد اليدوي، رسائل عرض ومتابعة وباقات وميزانية محدودة، قائمة عملاء CSV، ونماذج عرض.</p>
+      <div class="auth-banner">
+        <strong>صلاحيات وبيانات المكتب المعتمدة:</strong> يعمل الفريق بصلاحية تجهيز الخطط والرسائل والمتابعة والتدقيق الفوري باسم <strong>المطور الأستاذ عمر حسان عبره</strong> (واتساب: <code>00967737219181</code> | بريد: <code>omarebrah2060@gmail.com</code>)، مع بقاء الإرسال النهائي واعتماد العقود/الالتزامات تحت مراجعتك.
+      </div>
       <div class="tabs">
-        <button class="tab-btn active" data-tab="officeTab">1. المكتب والموظفون</button>
+        <button class="tab-btn active" data-tab="officeTab">1. المكتب والتنفيذ السريع</button>
         <button class="tab-btn" data-tab="approvalsTab">2. صندوق الموافقة</button>
         <button class="tab-btn" data-tab="salesTab">3. عرض العملاء وواتساب</button>
         <button class="tab-btn" data-tab="cloudTab">4. العمل أثناء قفل الهاتف</button>
         <button class="tab-btn" data-tab="leadsTab">5. قائمة العملاء المحتملين</button>
         <button class="tab-btn" data-tab="demosTab">6. نماذج العروض الجاهزة</button>
+        <button class="tab-btn" data-tab="intakeTab">7. الاستقبال والروتين الذكي</button>
       </div>
     </div>
 
-    <!-- 1. المكتب والموظفون -->
+    <!-- 1. المكتب والتنفيذ السريع -->
     <div id="officeTab" class="section active">
       <div class="box">
-        <h3>اختر موظفاً لإسناد مهمة (أو إرسال للكل)</h3>
+        <div class="quick-box">
+          <h4>تنفيذ فوري للمواقف والردود (بدون تفكير في الصياغة)</h4>
+          <div class="row" style="margin-bottom:8px;">
+            <input type="text" id="quickClientInput" class="flex-grow" placeholder="اسم العميل (مثال: ماجد الوصابي)" />
+            <input type="text" id="quickSituationInput" class="flex-grow" placeholder="ماذا قال العميل أو ما المطلوب؟ (مثال: يسأل عن السعر أو مشغول أو ميزانية محدودة)" />
+            <button type="button" class="green" id="quickExecuteBtn">توليد الرد فوراً</button>
+          </div>
+          <small>يُرسل الطلب تلقائياً إلى الموظف الأنسب ويعرض النتيجة جاهزة للنسخ في المحادثة أدناه.</small>
+        </div>
+
+        <h3>أو اختر موظفاً لإسناد مهمة مباشرة</h3>
         <div class="team-grid" id="teamGrid"></div>
         <h3 id="currentAgentHeading">المحادثة مع: رامي — مدير العمليات</h3>
         <div class="chat-box" id="chatBox"></div>
         <div class="row">
-          <input type="text" id="taskInput" class="flex-grow" placeholder="اكتب المهمة هنا... مثال: اكتب رد مقنع لعميل يسأل عن فائدة الموقع" />
+          <input type="text" id="taskInput" class="flex-grow" placeholder="اكتب المهمة هنا..." />
           <button id="sendTaskBtn">إرسال المهمة</button>
           <button id="sendAllBtn" class="gray">إرسال للفريق</button>
           <button id="resetDataBtn" class="gray">مسح السجل</button>
@@ -88,25 +103,26 @@
       <div class="box">
         <h3>مولّد رسائل العرض والمتابعة وواتساب</h3>
         <div class="row" style="margin-bottom:8px;">
-          <input type="text" id="clientName" class="flex-grow" placeholder="اسم المنشأة المستهدفة (مثال: مختبر الشفاء)" />
-          <input type="text" id="targetPhone" class="flex-grow" placeholder="رقم واتساب العميل (مثال: 96777xxxxxxx)" />
+          <input type="text" id="clientName" class="flex-grow" placeholder="اسم المنشأة المستهدفة (مثال: ماجد الوصابي)" />
+          <input type="text" id="targetPhone" class="flex-grow" placeholder="رقم واتساب العميل (مثال: 967734405060)" />
           <input type="text" id="demoLink" class="flex-grow" placeholder="رابط المعاينة (افتراضي: نموذج مكتب المهيوبـي)" />
         </div>
         <div class="row" style="margin-bottom:10px;">
           <button id="generatePitchBtn">1. رسالة العرض الأول</button>
           <button id="generateFollowupBtn" type="button" class="amber">2. رسالة متابعة بعد 48 ساعة</button>
           <button id="generatePricingBtn" type="button" class="gray">3. عرض باقات الأسعار</button>
+          <button id="generateBudgetBtn" type="button" class="green">4. رد الميزانية المحدودة</button>
         </div>
-        <textarea id="pitchOutput" rows="11">السلام عليكم ورحمة الله وبركاته أستاذ/دكتور [اسم المنشأة] 👋
+        <textarea id="pitchOutput" rows="11">السلام عليكم ورحمة الله وبركاته أستاذ/دكتور ماجد الوصابي 👋
 
-جهّزنا معاينة رقمية تفاعلية سريعة وخفيفة مخصصة لـ [اسم المنشأة] تعمل على جميع الهواتف بدون تحميل أي تطبيق، وتساعدكم على:
+صمّمنا معاينة رقمية تفاعلية خفيفة وسريعة تعمل على جميع الهواتف بأقل استهلاك للبيانات وبدون تحميل أي تطبيق، وتساعدكم على:
 • عرض الخدمات والأقسام بوضوح يرفع ثقة الزوار.
-• الرد السريع على الاستفسارات وتوجيه الزائر لطلب الحجز مباشرة عبر واتساب.
-• تنظيم طلبات العملاء وتقليل ضغط الاستقبال.
+• الرد السريع على الاستفسارات وتوجيه الزائر للحجز أو التواصل مباشرة عبر واتساب.
+• تنظيم الطلبات وتخفيف ضغط الاستقبال اليومي.
 
 🔗 رابط المعاينة التجريبية: https://appi37oufxahjen61dp.teable.app
 
-يمكن تفعيل نسخة تجريبية مجانية لمدة 7 أيام باسم منشأتكم لتجربتها عملياً. هل يناسبكم إرسال تفاصيل الباقة؟
+يسعدنا تفعيل تجربة مجانية لمدة 7 أيام لتقييمها عملياً على أرض الواقع، ثم اعتمادها برسوم ميسّرة. هل يناسبكم إرسال تفاصيل الباقة؟
 
 المطور الأستاذ عمر حسان عبره
 واتساب: 00967737219181 | البريد: omarebrah2060@gmail.com</textarea>
@@ -162,7 +178,7 @@ jobs:
         <h3>إدارة قائمة العملاء المحتملين وحالة التواصل</h3>
         <div class="row" style="margin-bottom:8px;">
           <input type="text" id="leadName" class="flex-grow" placeholder="اسم المنشأة أو العميل" />
-          <input type="text" id="leadPhone" class="flex-grow" placeholder="رقم واتساب العميل (مثال: 9677...)" />
+          <input type="text" id="leadPhone" class="flex-grow" placeholder="رقم واتساب العميل (مثال: 967734405060)" />
           <input type="text" id="leadDemo" class="flex-grow" placeholder="رابط المعاينة (اختياري)" />
           <select id="leadStatus" style="width:auto;">
             <option value="جديد">جديد</option>
@@ -201,9 +217,38 @@ jobs:
             <a href="https://appi37oufxahjen61dp.teable.app" target="_blank" style="text-decoration:none;">
               <button type="button">فتح المعاينة</button>
             </a>
-            <button type="button" class="green" onclick="loadPresetDemo('مكتب المهيوبـي', 'https://appi37oufxahjen61dp.teable.app', '')">استخدام في رسالة العميل</button>
+            <button type="button" class="green" onclick="loadPresetDemo('ماجد الوصابي', 'https://appi37oufxahjen61dp.teable.app', '967734405060')">استخدام في رسالة العميل</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- 7. الاستقبال والروتين الذكي -->
+    <div id="intakeTab" class="section">
+      <div class="box">
+        <h3>أداة الاستقبال الآلي للزوار حسب الحاجة والمنطقة</h3>
+        <div class="row" style="margin-bottom:8px;">
+          <select id="visitorType" class="flex-grow">
+            <option value="صاحب منشأة أو عيادة أو مكتب">صاحب منشأة أو عيادة أو مكتب</option>
+            <option value="طالب أو باحث عن تعلم">طالب أو باحث عن تعلم</option>
+            <option value="زائر يبحث عن مساعدة أو خدمة ميسّرة">زائر يبحث عن مساعدة أو خدمة ميسّرة</option>
+          </select>
+          <select id="visitorRegion" class="flex-grow">
+            <option value="منطقة ذات موارد محدودة / باقات بيانات اقتصادية">منطقة ذات موارد محدودة / باقات بيانات اقتصادية</option>
+            <option value="الخليج أو منطقة ذات اتصال سريع">الخليج أو منطقة ذات اتصال سريع</option>
+          </select>
+          <button type="button" class="green" id="generateIntakeBtn">توليد مسار الاستقبال</button>
+        </div>
+        <textarea id="intakeOutput" rows="8"></textarea>
+      </div>
+
+      <div class="box">
+        <h3>روتين التشغيل اليومي المختصر لتقليل الجهد اليدوي</h3>
+        <ol class="plan-list">
+          <li><strong>دفعة الصباح (10 دقائق):</strong> مراجعة التقرير أو صندوق الموافقة، وتحديد 3 عملاء فقط للإرسال أو المتابعة اليومية.</li>
+          <li><strong>توليد الردود الجاهزة عبر النظام:</strong> استخدام <em>«التنفيذ الفوري للمواقف»</em> و<em>«عرض العملاء وواتساب»</em> بدل كتابة الرسائل من الصفر.</li>
+          <li><strong>تثبيت الحالة وإغلاق اليوم:</strong> تحديث حالة العملاء في الجدول، وتصدير نسخة <code>CSV</code> أسبوعياً لحفظ عملك بأمان.</li>
+        </ol>
       </div>
     </div>
 
@@ -221,21 +266,21 @@ jobs:
         id: "manager",
         name: "رامي — مدير العمليات",
         role: "تقسيم المهام وتنسيق التنفيذ",
-        perms: "يخطط ولا يرسل للخارج دون اعتمادك",
+        perms: "يخطط ويفوّض ولا يرسل للخارج دون اعتمادك",
         prompt: "أنت رامي مدير العمليات. أجب بشكل مختصر جداً ومباشر للتنفيذ بدون مقدمات طويلة: قدّم خطوات عمل مرقمة وواضحة وفورية."
       },
       {
         id: "writer",
         name: "سارة — مختصة العروض",
         role: "صياغة رسائل وعروض العملاء",
-        perms: "مسودات العروض والرسائل فقط",
+        perms: "مسودات العروض والرسائل فقط (واتساب/بريد)",
         prompt: "أنت سارة مختصة العروض. اكتب نصاً مختصراً، مقنعاً، وجاهزاً للنسخ والإرسال فوراً دون حشو أو مقدمات."
       },
       {
         id: "secretary",
         name: "عمر — السكرتير والمتابعة",
         role: "تنظيم الجداول والمتابعة اليومية",
-        perms: "تنظيم المهام والتذكيرات فقط",
+        perms: "تنظيم المهام والتذكيرات والمتابعة فقط",
         prompt: "أنت عمر السكرتير. لخّص المهام والمتابعة في نقاط قصيرة ومباشرة قابلة للتنفيذ فوراً دون مقدمات."
       },
       {
@@ -247,7 +292,7 @@ jobs:
       }
     ];
 
-    const STORAGE_KEY = "single_file_ai_office_v4";
+    const STORAGE_KEY = "single_file_ai_office_v6";
     let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"chats":{},"approvals":[],"leads":[]}');
     if (!Array.isArray(state.leads)) state.leads = [];
     let selectedAgent = AGENTS[0];
@@ -300,6 +345,15 @@ jobs:
       btn.onclick = () => switchTab(btn.dataset.tab);
     });
 
+    function selectAgentById(id) {
+      const found = AGENTS.find(a => a.id === id);
+      if (!found) return;
+      selectedAgent = found;
+      document.getElementById("currentAgentHeading").textContent = "المحادثة مع: " + selectedAgent.name;
+      renderTeam();
+      renderChat();
+    }
+
     function renderTeam() {
       const grid = document.getElementById("teamGrid");
       grid.innerHTML = "";
@@ -307,12 +361,7 @@ jobs:
         const card = document.createElement("div");
         card.className = "emp-card" + (agent.id === selectedAgent.id ? " selected" : "");
         card.innerHTML = `<strong>${agent.name}</strong><div>${agent.role}</div><small>${agent.perms}</small>`;
-        card.onclick = () => {
-          selectedAgent = agent;
-          document.getElementById("currentAgentHeading").textContent = "المحادثة مع: " + agent.name;
-          renderTeam();
-          renderChat();
-        };
+        card.onclick = () => selectAgentById(agent.id);
         grid.appendChild(card);
       });
     }
@@ -392,6 +441,23 @@ jobs:
       if (agent.id === selectedAgent.id) renderChat();
     }
 
+    document.getElementById("quickExecuteBtn").onclick = async () => {
+      const cName = document.getElementById("quickClientInput").value.trim() || "العميل";
+      const sit = document.getElementById("quickSituationInput").value.trim();
+      if (!sit) return;
+      const lower = sit.toLowerCase();
+      let targetAgentId = "writer";
+      if (lower.includes("متابع") || lower.includes("جدول") || lower.includes("يوم")) {
+        targetAgentId = "secretary";
+      } else if (lower.includes("ميزان") || lower.includes("سعر") || lower.includes("غالي") || lower.includes("محدود")) {
+        targetAgentId = "writer";
+      }
+      selectAgentById(targetAgentId);
+      const composedTask = `العميل: ${cName}. الموقف/الطلب: ${sit}. اكتب رداً واضحاً ومختصراً يحفظ قيمة الخدمة وحق المطور ويقنع العميل عملياً.`;
+      document.getElementById("quickSituationInput").value = "";
+      await runForAgent(selectedAgent, composedTask);
+    };
+
     document.getElementById("sendTaskBtn").onclick = async () => {
       const input = document.getElementById("taskInput");
       const task = input.value.trim();
@@ -428,14 +494,14 @@ jobs:
     function buildPitchText(name, link) {
       return `السلام عليكم ورحمة الله وبركاته أستاذ/دكتور ${name} 👋
 
-جهّزنا معاينة رقمية تفاعلية سريعة وخفيفة مخصصة لـ ${name} تعمل على جميع الهواتف بدون تحميل أي تطبيق، وتساعدكم على:
+صمّمنا معاينة رقمية تفاعلية خفيفة وسريعة تعمل على جميع الهواتف بأقل استهلاك للبيانات وبدون تحميل أي تطبيق، وتساعدكم على:
 • عرض الخدمات والأقسام بوضوح يرفع ثقة الزوار.
-• الرد السريع على الاستفسارات وتوجيه الزائر لطلب الحجز مباشرة عبر واتساب.
-• تنظيم طلبات العملاء وتقليل ضغط الاستقبال.
+• الرد السريع على الاستفسارات وتوجيه الزائر للحجز أو التواصل مباشرة عبر واتساب.
+• تنظيم الطلبات وتخفيف ضغط الاستقبال اليومي.
 
 🔗 رابط المعاينة التجريبية: ${link}
 
-يمكن تفعيل نسخة تجريبية مجانية لمدة 7 أيام باسم منشأتكم لتجربتها عملياً. هل يناسبكم إرسال تفاصيل الباقة؟
+يسعدنا تفعيل تجربة مجانية لمدة 7 أيام لتقييمها عملياً على أرض الواقع، ثم اعتمادها برسوم ميسّرة. هل يناسبكم إرسال تفاصيل الباقة؟
 
 المطور الأستاذ عمر حسان عبره
 واتساب: 00967737219181 | البريد: omarebrah2060@gmail.com`;
@@ -467,6 +533,20 @@ jobs:
 • كل مزايا باقة التأسيس + مساعد ذكي للرد الفوري على استفسارات الزوار وتحديثات مستمرة.
 
 للاعتماد والبدء بالتنفيذ خلال 24 ساعة، تواصلوا معنا مباشرة:
+المطور الأستاذ عمر حسان عبره
+واتساب: 00967737219181 | البريد: omarebrah2060@gmail.com`;
+    }
+
+    function buildLimitedBudgetText(name) {
+      return `أهلاً بك أستاذ/دكتور ${name} 👋
+
+نقدّر تماماً ظروف الميزانية، ولهذا صمّمنا المسار بطريقة مرنة تحفظ قيمة العمل وتحقق لكم الفائدة دون إرهاق:
+• نبدأ أولاً بـ **تجربة مجانية لمدة 7 أيام** لتجربة النظام عملياً على أرض الواقع.
+• عند الاعتماد، نبدأ بـ **الباقة الأساسية الميسّرة** (بالأقسام والخدمات الأساسية وربط واتساب المباشر) بتكلفة تأسيس واضحة ومحددة مسبقاً دون أي رسوم خفية أو التزامات إضافية غير متفق عليها.
+• ويمكن إضافة أي ميزات أو تحديثات مستقبلية لاحقاً حسب نمو المنشأة.
+
+بهذا الشكل تبدؤون بأقل تكلفة ممكنة وتضمنون وضوح الحقوق والنتائج من اليوم الأول. هل نبدأ بتفعيل النسخة التجريبية لكم؟
+
 المطور الأستاذ عمر حسان عبره
 واتساب: 00967737219181 | البريد: omarebrah2060@gmail.com`;
     }
@@ -507,6 +587,12 @@ jobs:
       updateWaLinks();
     };
 
+    document.getElementById("generateBudgetBtn").onclick = () => {
+      const { name } = getClientInputs();
+      document.getElementById("pitchOutput").value = buildLimitedBudgetText(name);
+      updateWaLinks();
+    };
+
     document.getElementById("copyPitchBtn").onclick = () => {
       copyTextValue(document.getElementById("pitchOutput").value);
     };
@@ -518,6 +604,38 @@ jobs:
     document.getElementById("pitchOutput").addEventListener("input", updateWaLinks);
     document.getElementById("targetPhone").addEventListener("input", updateWaLinks);
     updateWaLinks();
+
+    // 7. الاستقبال الذكي للزوار
+    function buildIntakeGuide(type, region) {
+      const isLowResource = region.includes("محدودة");
+      const perfNote = isLowResource
+        ? "التركيز على واجهات خفيفة وسريعة جداً تعمل على الهواتف القديمة والأقل إمكانات وبأقل استهلاك للبيانات والإنترنت."
+        : "إمكانية إضافة معاينات تفاعلية متقدمة وتجربة سريعة فورية عبر المتصفح.";
+
+      if (type.includes("طالب")) {
+        return `مسار الاستقبال التلقائي — طالب أو باحث عن تعلم (${region}):
+• يحصل على شرح مبسّط وواضح وملخصات منظمة تدعم الفهم والمراجعة بسهولة.
+• ${perfNote}
+• يتم توجيهه للخطوة التعليمية المناسبة دون تعقيد أو إهدار للوقت.`;
+      }
+      if (type.includes("مساعدة")) {
+        return `مسار الاستقبال التلقائي — زائر يبحث عن مساعدة أو خدمة ميسّرة (${region}):
+• يتم توضيح الخيارات المتاحة بشكل مباشر وسهل الاستخدام بدون خطوات معقدة.
+• ${perfNote}
+• يُوجّه للتواصل المنظم عبر واتساب (00967737219181) أو البريد (omarebrah2060@gmail.com) لتجهيز طلبه.`;
+      }
+      return `مسار الاستقبال التلقائي — صاحب منشأة أو عيادة أو مكتب (${region}):
+• يرى فوراً كيف تعرض الصفحة خدماته وتسهّل حجز العملاء وتقليل أسئلة الاستقبال المتكررة.
+• ${perfNote}
+• يبدأ بتجربة مجانية لمدة 7 أيام ثم يختار الباقة المناسبة مع حفظ الحقوق المالية والشروط بوضوح.`;
+    }
+
+    document.getElementById("generateIntakeBtn").onclick = () => {
+      const t = document.getElementById("visitorType").value;
+      const r = document.getElementById("visitorRegion").value;
+      document.getElementById("intakeOutput").value = buildIntakeGuide(t, r);
+    };
+    document.getElementById("generateIntakeBtn").click();
 
     // 5. قائمة العملاء المحتملين + تصدير CSV
     function renderLeads() {
