@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مكتب الذكاء الاصطناعي والعملاء - المطور الأستاذ عمر حسان عبره</title>
+  <title>مكتب الذكاء الاصطناعي والعملاء (8 موظفين) - المطور الأستاذ عمر حسان عبره</title>
   <style>
     * { box-sizing: border-box; }
     body { font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; color: #0f172a; margin: 0; padding: 12px; line-height: 1.5; }
-    .wrap { max-width: 1080px; margin: auto; }
+    .wrap { max-width: 1120px; margin: auto; }
     .box { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
     h1, h2, h3, h4 { margin-top: 0; color: #0f766e; }
     .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .tab-btn { background: #e2e8f0; color: #0f172a; border: none; padding: 9px 13px; border-radius: 7px; cursor: pointer; font-weight: bold; }
+    .tab-btn { background: #e2e8f0; color: #0f172a; border: none; padding: 9px 12px; border-radius: 7px; cursor: pointer; font-weight: bold; font-size: 13px; }
     .tab-btn.active { background: #0f766e; color: #ffffff; }
     .section { display: none; }
     .section.active { display: block; }
     .quick-box { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+    .research-box { background: #eff6ff; border: 1px solid #93c5fd; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+    .trainer-box { background: #fdf4ff; border: 1px solid #e879f9; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+    .closer-box { background: #ecfdf5; border: 1px solid #6ee7b7; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+    .backup-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
     .auth-banner { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 13px; }
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 12px; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-bottom: 12px; }
     .emp-card { border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px; background: #f8fafc; cursor: pointer; }
     .emp-card.selected { border: 2px solid #0f766e; background: #f0fdfa; }
-    .chat-box { height: 250px; overflow-y: auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+    .badge { display: inline-block; background: #0f766e; color: #fff; font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-top: 4px; }
+    .chat-box { height: 260px; overflow-y: auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
     .msg { padding: 8px 10px; border-radius: 6px; margin-bottom: 8px; font-size: 14px; }
     .msg.user { background: #dbeafe; white-space: pre-wrap; }
     .msg.ai { background: #dcfce7; }
@@ -30,14 +35,14 @@
     input[type="text"], textarea, select { width: 100%; padding: 9px; border: 1px solid #94a3b8; border-radius: 6px; font-family: inherit; font-size: 14px; }
     .flex-grow { flex: 1; min-width: 190px; }
     button { background: #0f766e; color: #fff; border: none; padding: 9px 14px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+    button.blue { background: #1d4ed8; }
+    button.purple { background: #7e22ce; }
     button.gray { background: #475569; }
     button.green { background: #15803d; }
     button.amber { background: #b45309; }
     button.red { background: #b91c1c; }
     .approval { border: 1px dashed #d97706; background: #fffbeb; border-radius: 8px; padding: 10px; margin-bottom: 8px; }
     .demo-card { border: 1px solid #99f6e4; background: #f0fdfa; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
-    .plan-list { margin: 8px 0 0; padding-right: 18px; }
-    .plan-list li { margin-bottom: 6px; }
     table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
     th, td { border: 1px solid #cbd5e1; padding: 8px; text-align: right; }
     th { background: #e2e8f0; }
@@ -48,41 +53,61 @@
 <body>
   <div class="wrap">
     <div class="box">
-      <h1>مكتب الذكاء الاصطناعي والعملاء (ملف واحد متكامل)</h1>
-      <p>تشغيل مباشر عبر <strong>text.pollinations.ai</strong> بردود عملية مختصرة، تنفيذ فوري للمواقف، استقبال آلي حسب الحاجة والمنطقة، روتين تقليل الجهد اليدوي، رسائل عرض ومتابعة وباقات وميزانية محدودة، قائمة عملاء CSV، ونماذج عرض.</p>
+      <h1>مكتب الذكاء الاصطناعي والعملاء — طاقم 8 موظفين متكامل</h1>
+      <p>تشغيل مباشر عبر <strong>text.pollinations.ai</strong> مع محادثة مستقلة لكل موظف، منجز لتقرير التنفيذ والخطوة الفورية، سهيل للخطة الثلاثية البسيطة، فيصل للبحث، نور للتدريب، ونسخ احتياطي واستعادة JSON.</p>
       <div class="auth-banner">
-        <strong>صلاحيات وبيانات المكتب المعتمدة:</strong> يعمل الفريق بصلاحية تجهيز الخطط والرسائل والمتابعة والتدقيق الفوري باسم <strong>المطور الأستاذ عمر حسان عبره</strong> (واتساب: <code>00967737219181</code> | بريد: <code>omarebrah2060@gmail.com</code>)، مع بقاء الإرسال النهائي واعتماد العقود/الالتزامات تحت مراجعتك.
+        <strong>صلاحيات وبيانات المكتب المعتمدة:</strong> يعمل الفريق باسم <strong>المطور الأستاذ عمر حسان عبره</strong> (واتساب: <code>00967737219181</code> | بريد: <code>omarebrah2060@gmail.com</code>) مع بقاء الاعتماد النهائي تحت إشرافك.
+      </div>
+      <div class="backup-box">
+        <div class="row">
+          <strong>النسخ الاحتياطي للبيانات:</strong>
+          <button type="button" class="blue" id="exportBackupBtn">تصدير نسخة JSON</button>
+          <button type="button" class="gray" id="importBackupBtn">استعادة نسخة JSON</button>
+          <input type="file" id="backupFileInput" accept=".json,application/json" style="display:none;" />
+          <span id="backupStatus" style="font-size:12px; color:#0f766e;"></span>
+        </div>
       </div>
       <div class="tabs">
-        <button class="tab-btn active" data-tab="officeTab">1. المكتب والتنفيذ السريع</button>
-        <button class="tab-btn" data-tab="approvalsTab">2. صندوق الموافقة</button>
-        <button class="tab-btn" data-tab="salesTab">3. عرض العملاء وواتساب</button>
-        <button class="tab-btn" data-tab="cloudTab">4. العمل أثناء قفل الهاتف</button>
-        <button class="tab-btn" data-tab="leadsTab">5. قائمة العملاء المحتملين</button>
-        <button class="tab-btn" data-tab="demosTab">6. نماذج العروض الجاهزة</button>
-        <button class="tab-btn" data-tab="intakeTab">7. الاستقبال والروتين الذكي</button>
+        <button class="tab-btn active" data-tab="officeTab">1. المكتب والطاقم (8)</button>
+        <button class="tab-btn" data-tab="closerTab">2. منجز — تقرير التنفيذ</button>
+        <button class="tab-btn" data-tab="researchTab">3. فيصل — باحث العملاء</button>
+        <button class="tab-btn" data-tab="trainerTab">4. نور — تدريب الموظفين</button>
+        <button class="tab-btn" data-tab="approvalsTab">5. صندوق الموافقة</button>
+        <button class="tab-btn" data-tab="salesTab">6. عرض العملاء وواتساب</button>
+        <button class="tab-btn" data-tab="leadsTab">7. قائمة العملاء المحتملين</button>
+        <button class="tab-btn" data-tab="demosTab">8. نماذج العروض</button>
+        <button class="tab-btn" data-tab="cloudTab">9. العمل أثناء قفل الهاتف</button>
       </div>
     </div>
 
-    <!-- 1. المكتب والتنفيذ السريع -->
+    <!-- 1. المكتب والطاقم -->
     <div id="officeTab" class="section active">
       <div class="box">
         <div class="quick-box">
-          <h4>تنفيذ فوري للمواقف والردود (بدون تفكير في الصياغة)</h4>
+          <h4>تنفيذ فوري للمواقف والردود</h4>
           <div class="row" style="margin-bottom:8px;">
             <input type="text" id="quickClientInput" class="flex-grow" placeholder="اسم العميل (مثال: ماجد الوصابي)" />
-            <input type="text" id="quickSituationInput" class="flex-grow" placeholder="ماذا قال العميل أو ما المطلوب؟ (مثال: يسأل عن السعر أو مشغول أو ميزانية محدودة)" />
+            <input type="text" id="quickSituationInput" class="flex-grow" placeholder="ماذا قال العميل أو ما المطلوب؟ (مثال: يسأل عن السعر أو مشغول)" />
             <button type="button" class="green" id="quickExecuteBtn">توليد الرد فوراً</button>
           </div>
-          <small>يُرسل الطلب تلقائياً إلى الموظف الأنسب ويعرض النتيجة جاهزة للنسخ في المحادثة أدناه.</small>
         </div>
 
-        <h3>أو اختر موظفاً لإسناد مهمة مباشرة</h3>
+        <div class="quick-box" style="background:#fffbeb; border-color:#fcd34d;">
+          <h4>سهيل — خطة يومية سهلة من 3 خطوات فقط</h4>
+          <div class="row">
+            <input type="text" id="sohailFocusInput" class="flex-grow" placeholder="موضوع اليوم (مثال: متابعة عملاء وجلب عملاء جدد بأقل جهد)" />
+            <button type="button" class="amber" id="runSohailPlanBtn">توليد خطة 3 خطوات</button>
+            <button type="button" class="gray" id="copySohailPlanBtn">نسخ الخطة</button>
+          </div>
+          <div id="sohailPlanBox" style="margin-top:8px; white-space:pre-wrap; background:#fff; padding:8px; border-radius:6px; border:1px solid #fde68a;">اضغط «توليد خطة 3 خطوات» ليجهّز سهيل أسهل خطة لليوم...</div>
+        </div>
+
+        <h3>اختر موظفاً من الطاقم للتكلم معه أو تكليفه بمهمة مباشرة</h3>
         <div class="team-grid" id="teamGrid"></div>
         <h3 id="currentAgentHeading">المحادثة مع: رامي — مدير العمليات</h3>
         <div class="chat-box" id="chatBox"></div>
         <div class="row">
-          <input type="text" id="taskInput" class="flex-grow" placeholder="اكتب المهمة هنا..." />
+          <input type="text" id="taskInput" class="flex-grow" placeholder="اكتب رسالتك أو المهمة الموجهة لهذا الموظف..." />
           <button id="sendTaskBtn">إرسال المهمة</button>
           <button id="sendAllBtn" class="gray">إرسال للفريق</button>
           <button id="resetDataBtn" class="gray">مسح السجل</button>
@@ -90,7 +115,68 @@
       </div>
     </div>
 
-    <!-- 2. صندوق الموافقة -->
+    <!-- 2. منجز — تقرير التنفيذ والخطوة التالية بضغطة زر -->
+    <div id="closerTab" class="section">
+      <div class="box">
+        <div class="closer-box">
+          <h3>منجز — تجميع إنجاز الفريق ومراجعة المخرجات وتحديد خطوتك</h3>
+          <p>يجمع «منجز» ما قام به الموظفون ويراجع جودته ويعطيك تقريراً واضحاً ومباشراً بما تم إنجازه وما عليك فعله الآن بضغطة زر:</p>
+          <input type="text" id="closerGoalInput" placeholder="هدف المهمة الحالية (مثال: تجهيز عرض وإرساله لعميل جديد)" style="margin-bottom:8px;" />
+          <div class="row">
+            <button type="button" class="green" id="runCloserBtn">توليد تقرير الإنجاز والمراجعة</button>
+            <button type="button" class="blue" id="copyCloserReportBtn">نسخ التقرير فوراً</button>
+            <button type="button" class="amber" id="goSalesFromCloserBtn">الانتقال لصفحة الإرسال والواتساب</button>
+            <button type="button" class="gray" id="goLeadsFromCloserBtn">فتح قائمة العملاء</button>
+          </div>
+        </div>
+        <h4>تقرير منجز النهائي:</h4>
+        <div class="chat-box" id="closerResultBox">اضغط «توليد تقرير الإنجاز والمراجعة» ليجمع منجز أعمال الفريق ويحدد خطوتك المباشرة...</div>
+      </div>
+    </div>
+
+    <!-- 3. فيصل — باحث العملاء -->
+    <div id="researchTab" class="section">
+      <div class="box">
+        <div class="research-box">
+          <h3>فيصل — باحث العملاء المحتملين والأسواق عبر الإنترنت</h3>
+          <p>زوّد فيصل بالمواصفات المطلوبة ليجهّز لك خطة بحث، أسماء منشآت ونماذج مستهدفة، وروابط بحث جاهزة في جوجل وخرائط جوجل:</p>
+          <div class="row" style="margin-bottom:8px;">
+            <input type="text" id="resCompanyType" class="flex-grow" placeholder="اسم الشركة أو نوع النشاط (مثال: مختبرات تحاليل / مكاتب سياحة)" />
+            <input type="text" id="resTraits" class="flex-grow" placeholder="الصفات المطلوبة (مثال: تفتقر لموقع حجز سريع / نشطة على فيسبوك)" />
+          </div>
+          <div class="row" style="margin-bottom:10px;">
+            <input type="text" id="resAudience" class="flex-grow" placeholder="الفئة المستهدفة (مثال: الأطباء، الطلاب، أصحاب المتاجر)" />
+            <input type="text" id="resCountry" class="flex-grow" placeholder="الدولة / المدينة (مثال: اليمن - الحديدة، أو السعودية، أو عُمان)" />
+          </div>
+          <div class="row">
+            <button type="button" class="blue" id="runResearchBtn">تشغيل فيصل للبحث وتجهيز القائمة</button>
+            <a id="googleSearchDirectBtn" target="_blank" style="text-decoration:none;"><button type="button" class="gray">فتح بحث جوجل المباشر</button></a>
+            <a id="mapsSearchDirectBtn" target="_blank" style="text-decoration:none;"><button type="button" class="green">فتح خرائط جوجل المباشرة</button></a>
+          </div>
+        </div>
+        <h4>نتيجة بحث فيصل:</h4>
+        <div class="chat-box" id="researchResultBox">املأ الخانات أعلاه واضغط «تشغيل فيصل للبحث وتجهيز القائمة»...</div>
+      </div>
+    </div>
+
+    <!-- 4. نور — تدريب الموظفين -->
+    <div id="trainerTab" class="section">
+      <div class="box">
+        <div class="trainer-box">
+          <h3>نور — مدربة الموظفين وتطوير المهارات</h3>
+          <p>اختر الموظف الذي تريد تطوير أدائه، وحدد المهارة أو الملاحظة المطلوبة؛ ستقوم <strong>نور</strong> بصياغة قاعدة تدريبية وحفظها تلقائياً في تعليمات ذلك الموظف:</p>
+          <div class="row" style="margin-bottom:8px;">
+            <select id="trainTargetAgent" class="flex-grow"></select>
+            <input type="text" id="trainFocusInput" class="flex-grow" placeholder="ما المهارة المطلوب تقويتها؟ (مثال: الإقناع الهادئ للعميل المتردد)" />
+            <button type="button" class="purple" id="runTrainBtn">تدريب الموظف وحفظ المهارة</button>
+          </div>
+        </div>
+        <h4>سجل التدريب والمهارات المكتسبة:</h4>
+        <div class="chat-box" id="trainerResultBox">اختر موظفاً واضغط «تدريب الموظف وحفظ المهارة» لتطوير أدائه...</div>
+      </div>
+    </div>
+
+    <!-- 5. صندوق الموافقة -->
     <div id="approvalsTab" class="section">
       <div class="box">
         <h3>المخرجات الجاهزة بانتظار موافقتك</h3>
@@ -98,7 +184,7 @@
       </div>
     </div>
 
-    <!-- 3. عرض العملاء وواتساب -->
+    <!-- 6. عرض العملاء وواتساب -->
     <div id="salesTab" class="section">
       <div class="box">
         <h3>مولّد رسائل العرض والمتابعة وواتساب</h3>
@@ -132,47 +218,9 @@
           <a id="waSelfBtn" target="_blank" style="text-decoration:none;"><button type="button" class="gray">إرسال نسخة لواتسابي (00967737219181)</button></a>
         </div>
       </div>
-
-      <div class="box">
-        <h3>خطة عملية من 5 خطوات لجلب أول 5 عملاء هذا الأسبوع</h3>
-        <ol class="plan-list">
-          <li><strong>تجهيز الرابط النموذجي الجاهز:</strong> استخدام نموذج <strong>مكتب المهيوبـي</strong> (<code>https://appi37oufxahjen61dp.teable.app</code>) كمعاينة حية توضح للعميل شكل التجربة ووضوحها قبل أن يدفع أي مبلغ.</li>
-          <li><strong>اختيار 15 منشأة مستهدفة:</strong> جمع أسماء وأرقام واتساب لعيادات، مختبرات، مكاتب سفر وخدمات، أو مدارس تفتقر لواجهة تفاعلية سريعة أو حجز مباشر.</li>
-          <li><strong>إرسال عرض مخصص ومختصر:</strong> إرسال رسالة واتساب باسم المنشأة مع رابط المعاينة واقتراح تجربة مجانية لمدة 7 أيام لتقليل التردد.</li>
-          <li><strong>متابعة سريعة بعد 24 إلى 48 ساعة:</strong> استخدام زر <em>«رسالة متابعة بعد 48 ساعة»</em> لمن لم يرد، وتحديث حالته في جدول العملاء.</li>
-          <li><strong>إغلاق أول 5 صفقات برسوم واضحة:</strong> إرسال عرض باقات الأسعار الميسّر مع تسليم سريع وتحصيل عائد مستقل يدعم معيشتك ومشروعك.</li>
-        </ol>
-      </div>
     </div>
 
-    <!-- 4. العمل أثناء قفل الهاتف -->
-    <div id="cloudTab" class="section">
-      <div class="box">
-        <h3>كيف يعمل النظام وأنت قافل هاتفك؟</h3>
-        <p>ملف <strong>index.html</strong> يعمل في المتصفح عندما تفتحه، أما التشغيل التلقائي والهاتف مغلق فيتم عبر جدولة سحابية (مثل <strong>GitHub Actions</strong>) تستدعي <code>text.pollinations.ai</code> وتخزن النتائج في المستودع لتجدها جاهزة عند فتح هاتفك.</p>
-        <div class="row" style="margin-bottom:8px;">
-          <button type="button" id="copyWorkflowBtn" class="green">نسخ كود GitHub Actions</button>
-        </div>
-        <pre id="workflowCode">name: Auto AI Office Task
-on:
-  schedule:
-    - cron: "0 6 * * *" # كل يوم الساعة 06:00 UTC
-  workflow_dispatch:
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: |
-          mkdir -p reports
-          ENC=$(node -e "console.log(encodeURIComponent('أنت سكرتير المكتب. لخص خطوات متابعة العملاء اليومية في 4 نقاط مختصرة.'))")
-          curl -s "https://text.pollinations.ai/${ENC}" > "reports/daily-$(date +%F).md"
-          git config user.name "OfficeBot" && git config user.email "bot@example.com"
-          git add reports/ && git diff --staged --quiet || (git commit -m "تقرير $(date +%F)" && git push)</pre>
-      </div>
-    </div>
-
-    <!-- 5. قائمة العملاء المحتملين -->
+    <!-- 7. قائمة العملاء المحتملين -->
     <div id="leadsTab" class="section">
       <div class="box">
         <h3>إدارة قائمة العملاء المحتملين وحالة التواصل</h3>
@@ -205,7 +253,7 @@ jobs:
       </div>
     </div>
 
-    <!-- 6. نماذج العروض الجاهزة -->
+    <!-- 8. نماذج العروض -->
     <div id="demosTab" class="section">
       <div class="box">
         <h3>نماذج العروض الجاهزة لإرسالها للعملاء</h3>
@@ -223,32 +271,30 @@ jobs:
       </div>
     </div>
 
-    <!-- 7. الاستقبال والروتين الذكي -->
-    <div id="intakeTab" class="section">
+    <!-- 9. العمل أثناء قفل الهاتف -->
+    <div id="cloudTab" class="section">
       <div class="box">
-        <h3>أداة الاستقبال الآلي للزوار حسب الحاجة والمنطقة</h3>
+        <h3>كيف يعمل النظام وأنت قافل هاتفك؟</h3>
+        <p>ملف <strong>index.html</strong> يعمل في المتصفح عندما تفتحه، أما التشغيل التلقائي والهاتف مغلق فيتم عبر جدولة سحابية (مثل <strong>GitHub Actions</strong>) تستدعي <code>text.pollinations.ai</code> وتخزن النتائج في المستودع لتجدها جاهزة عند فتح هاتفك.</p>
         <div class="row" style="margin-bottom:8px;">
-          <select id="visitorType" class="flex-grow">
-            <option value="صاحب منشأة أو عيادة أو مكتب">صاحب منشأة أو عيادة أو مكتب</option>
-            <option value="طالب أو باحث عن تعلم">طالب أو باحث عن تعلم</option>
-            <option value="زائر يبحث عن مساعدة أو خدمة ميسّرة">زائر يبحث عن مساعدة أو خدمة ميسّرة</option>
-          </select>
-          <select id="visitorRegion" class="flex-grow">
-            <option value="منطقة ذات موارد محدودة / باقات بيانات اقتصادية">منطقة ذات موارد محدودة / باقات بيانات اقتصادية</option>
-            <option value="الخليج أو منطقة ذات اتصال سريع">الخليج أو منطقة ذات اتصال سريع</option>
-          </select>
-          <button type="button" class="green" id="generateIntakeBtn">توليد مسار الاستقبال</button>
+          <button type="button" id="copyWorkflowBtn" class="green">نسخ كود GitHub Actions</button>
         </div>
-        <textarea id="intakeOutput" rows="8"></textarea>
-      </div>
-
-      <div class="box">
-        <h3>روتين التشغيل اليومي المختصر لتقليل الجهد اليدوي</h3>
-        <ol class="plan-list">
-          <li><strong>دفعة الصباح (10 دقائق):</strong> مراجعة التقرير أو صندوق الموافقة، وتحديد 3 عملاء فقط للإرسال أو المتابعة اليومية.</li>
-          <li><strong>توليد الردود الجاهزة عبر النظام:</strong> استخدام <em>«التنفيذ الفوري للمواقف»</em> و<em>«عرض العملاء وواتساب»</em> بدل كتابة الرسائل من الصفر.</li>
-          <li><strong>تثبيت الحالة وإغلاق اليوم:</strong> تحديث حالة العملاء في الجدول، وتصدير نسخة <code>CSV</code> أسبوعياً لحفظ عملك بأمان.</li>
-        </ol>
+        <pre id="workflowCode">name: Auto AI Office Task
+on:
+  schedule:
+    - cron: "0 6 * * *" # كل يوم الساعة 06:00 UTC
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p reports
+          ENC=$(node -e "console.log(encodeURIComponent('أنت سكرتير المكتب. لخص خطوات متابعة العملاء اليومية في 4 نقاط مختصرة.'))")
+          curl -s "https://text.pollinations.ai/${ENC}" > "reports/daily-$(date +%F).md"
+          git config user.name "OfficeBot" && git config user.email "bot@example.com"
+          git add reports/ && git diff --staged --quiet || (git commit -m "تقرير $(date +%F)" && git push)</pre>
       </div>
     </div>
 
@@ -289,17 +335,102 @@ jobs:
         role: "فحص المخرجات واكتشاف النواقص",
         perms: "مراجعة وتنقيح فقط بدون نشر",
         prompt: "أنت طارق مراجع الجودة والأمان. اذكر أبرز ملاحظة عملية في سطر ثم قدّم نسخة مختصرة ومنقحة مباشرة."
+      },
+      {
+        id: "researcher",
+        name: "فيصل — باحث العملاء والأسواق",
+        role: "تحديد الفئات المستهدفة وقوائم البحث عن العملاء",
+        perms: "بحث واستكشاف وتجهيز قوائم استهداف فقط",
+        prompt: "أنت فيصل باحث العملاء والأسواق. بناءً على النشاط والصفات والفئة والدولة، قدّم: 1) أبرز 5 أنواع منشآت مستهدفة وأمثلة واقعية، 2) أفضل 3 عبارات بحث في جوجل وخرائط جوجل، 3) زاوية الإقناع المناسبة لهم باختصار شديد."
+      },
+      {
+        id: "trainer",
+        name: "نور — مدربة الفريق والتطوير",
+        role: "تدريب الموظفين وتحسين مهاراتهم باستمرار",
+        perms: "صياغة قواعد تدريب وتحسين أداء الفريق",
+        prompt: "أنت نور مدربة فريق الذكاء الاصطناعي. اكتب قاعدة تدريبية مركزة ومباشرة في 3 نقاط قصيرة لتحسين أداء الموظف المستهدف في المبيعات أو المتابعة أو البحث."
+      },
+      {
+        id: "closer",
+        name: "منجز — منسق الإنجاز والمراجعة",
+        role: "تجميع أعمال الفريق ومراجعتها وتحديد خطوتك الفورية",
+        perms: "تجميع ومراجعة المخرجات وتجهيز تقرير التنفيذ",
+        prompt: "أنت منجز، منسق الإنجاز ومراجعة المخرجات. اجمع ما قام به الفريق وراجعه، ثم اكتب تقريراً واضحاً ومختصراً يتضمن: 1) ملخص ما تم إنجازه، 2) ملاحظة مراجعة سريعة، 3) الخطوة المباشرة الجاهزة التي ينفذها المطور الآن."
+      },
+      {
+        id: "simplifier",
+        name: "سهيل — مساعد التبسيط والاختصار",
+        role: "تبسيط المهام والردود لتسهيل التنفيذ السريع",
+        perms: "تبسيط وتلخيص وتسهيل التنفيذ الفوري",
+        prompt: "أنت سهيل، مساعد التبسيط والاختصار. حوّل أي مهمة أو رد إلى خطوات سهلة جداً، قصيرة، وخفيفة للتنفيذ الفوري دون أي تعقيد أو حشو."
       }
     ];
 
-    const STORAGE_KEY = "single_file_ai_office_v6";
-    let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"chats":{},"approvals":[],"leads":[]}');
+    const STORAGE_KEY = "single_file_ai_office_v9";
+    let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"chats":{},"approvals":[],"leads":[],"trainingNotes":{}}');
     if (!Array.isArray(state.leads)) state.leads = [];
+    if (!state.trainingNotes || typeof state.trainingNotes !== "object") state.trainingNotes = {};
     let selectedAgent = AGENTS[0];
+    let latestCloserText = "";
+    let latestSohailPlanText = "";
 
     function saveState() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     }
+
+    function refreshAllViews() {
+      renderTeam();
+      renderChat();
+      renderApprovals();
+      renderLeads();
+      populateTrainerSelect();
+    }
+
+    // تصدير واستعادة نسخة احتياطية JSON
+    document.getElementById("exportBackupBtn").onclick = () => {
+      const payload = {
+        exportedAt: new Date().toISOString(),
+        developer: "المطور الأستاذ عمر حسان عبره",
+        data: state
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `ai-office-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      document.getElementById("backupStatus").textContent = "تم تصدير النسخة الاحتياطية بنجاح.";
+    };
+
+    document.getElementById("importBackupBtn").onclick = () => {
+      document.getElementById("backupFileInput").click();
+    };
+
+    document.getElementById("backupFileInput").onchange = (ev) => {
+      const file = ev.target.files && ev.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(String(reader.result || "{}"));
+          const imported = parsed.data && typeof parsed.data === "object" ? parsed.data : parsed;
+          state = {
+            chats: imported.chats && typeof imported.chats === "object" ? imported.chats : {},
+            approvals: Array.isArray(imported.approvals) ? imported.approvals : [],
+            leads: Array.isArray(imported.leads) ? imported.leads : [],
+            trainingNotes: imported.trainingNotes && typeof imported.trainingNotes === "object" ? imported.trainingNotes : {}
+          };
+          saveState();
+          refreshAllViews();
+          document.getElementById("backupStatus").textContent = "تمت استعادة النسخة الاحتياطية بنجاح.";
+        } catch (err) {
+          document.getElementById("backupStatus").textContent = "تعذر قراءة ملف النسخة الاحتياطية.";
+        }
+      };
+      reader.readAsText(file, "utf-8");
+      ev.target.value = "";
+    };
 
     function switchTab(tabId) {
       document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tabId));
@@ -330,6 +461,12 @@ jobs:
       if (msgs[index]) copyTextValue(msgs[index].text);
     };
 
+    function getEffectivePrompt(agent) {
+      const extra = state.trainingNotes[agent.id] || [];
+      if (!extra.length) return agent.prompt;
+      return agent.prompt + "\nمهارات تدريبية مكتسبة من المدربة نور:\n- " + extra.join("\n- ");
+    }
+
     async function askPollinations(systemPrompt, taskText) {
       const fullPrompt =
         "أجب بالعربية بوضوح واختصار شديد ومباشرة للتنفيذ دون مقدمات مطولة.\n" +
@@ -358,9 +495,10 @@ jobs:
       const grid = document.getElementById("teamGrid");
       grid.innerHTML = "";
       AGENTS.forEach(agent => {
+        const trainedCount = (state.trainingNotes[agent.id] || []).length;
         const card = document.createElement("div");
         card.className = "emp-card" + (agent.id === selectedAgent.id ? " selected" : "");
-        card.innerHTML = `<strong>${agent.name}</strong><div>${agent.role}</div><small>${agent.perms}</small>`;
+        card.innerHTML = `<strong>${agent.name}</strong><div>${agent.role}</div><small>${agent.perms}</small>${trainedCount ? `<div><span class="badge">تحديثات تدريب: ${trainedCount}</span></div>` : ""}`;
         card.onclick = () => selectAgentById(agent.id);
         grid.appendChild(card);
       });
@@ -429,31 +567,95 @@ jobs:
       if (agent.id === selectedAgent.id) renderChat();
 
       try {
-        const reply = await askPollinations(agent.prompt, task);
+        const reply = await askPollinations(getEffectivePrompt(agent), task);
         state.chats[agent.id].pop();
         state.chats[agent.id].push({ role: "ai", text: reply });
         addApproval(agent.name, task, reply);
+        return reply;
       } catch (e) {
         state.chats[agent.id].pop();
         state.chats[agent.id].push({ role: "ai", text: "تعذر إتمام الطلب الآن، يرجى المحاولة مرة أخرى." });
         saveState();
+        return null;
+      } finally {
+        if (agent.id === selectedAgent.id) renderChat();
       }
-      if (agent.id === selectedAgent.id) renderChat();
     }
+
+    // سهيل — خطة يومية من 3 خطوات فقط
+    document.getElementById("runSohailPlanBtn").onclick = async () => {
+      const focus = document.getElementById("sohailFocusInput").value.trim() || "إرسال العروض ومتابعة العملاء بأقل جهد";
+      const planBox = document.getElementById("sohailPlanBox");
+      planBox.textContent = "سهيل يجهّز خطة من 3 خطوات فقط...";
+      const sohail = AGENTS.find(a => a.id === "simplifier");
+      const reply = await runForAgent(sohail, `ضع خطة يومية سهلة وواضحة من 3 خطوات مرقمة فقط (1، 2، 3) بدون مقدمات أو حشو حول: ${focus}`);
+      if (reply) {
+        latestSohailPlanText = reply;
+        planBox.textContent = reply;
+      } else {
+        planBox.textContent = "تعذر توليد الخطة الآن، حاول مرة أخرى.";
+      }
+    };
+
+    document.getElementById("copySohailPlanBtn").onclick = () => {
+      if (latestSohailPlanText) copyTextValue(latestSohailPlanText);
+    };
+
+    // 2. منجز — تجميع أعمال الفريق وتقديم تقرير + خطوة فورية
+    function collectRecentTeamOutputs() {
+      const items = [];
+      AGENTS.forEach(ag => {
+        if (ag.id === "closer") return;
+        const msgs = state.chats[ag.id] || [];
+        const lastAi = [...msgs].reverse().find(m => m.role === "ai" && m.text !== "جاري التنفيذ...");
+        if (lastAi) {
+          items.push(`${ag.name}: ${lastAi.text.slice(0, 320)}`);
+        }
+      });
+      return items.length ? items.join("\n---\n") : "لا توجد مخرجات حديثة مسجلة بعد من الموظفين؛ ابدأ بتقييم خطة العمل وإعطاء الخطوة الفورية للمطور.";
+    }
+
+    document.getElementById("runCloserBtn").onclick = async () => {
+      const goal = document.getElementById("closerGoalInput").value.trim() || "إنجاز عرض عميل وبدء التواصل والمتابعة بأقل جهد";
+      const box = document.getElementById("closerResultBox");
+      box.innerHTML = `<div class="msg ai">منجز يجمع أعمال الفريق ويراجعها ويجهّز التقرير الآن...</div>`;
+
+      const closer = AGENTS.find(a => a.id === "closer");
+      const summaryInput = collectRecentTeamOutputs();
+      const promptTask = `الهدف: ${goal}\n\nمخرجات الفريق المتاحة:\n${summaryInput}\n\nاجمع ما تم، راجعه، وقدّم تقرير إنجاز مختصراً وما يجب أن يفعله المطور الآن بخطوة واضحة.`;
+      const reply = await runForAgent(closer, promptTask);
+
+      if (reply) {
+        latestCloserText = reply;
+        box.innerHTML = `<div class="msg ai"><div class="msg-text">${escapeHtml(reply)}</div></div>`;
+      } else {
+        box.innerHTML = `<div class="msg ai">تعذر توليد تقرير منجز الآن، حاول مرة أخرى.</div>`;
+      }
+    };
+
+    document.getElementById("copyCloserReportBtn").onclick = () => {
+      if (latestCloserText) copyTextValue(latestCloserText);
+    };
+    document.getElementById("goSalesFromCloserBtn").onclick = () => switchTab("salesTab");
+    document.getElementById("goLeadsFromCloserBtn").onclick = () => switchTab("leadsTab");
 
     document.getElementById("quickExecuteBtn").onclick = async () => {
       const cName = document.getElementById("quickClientInput").value.trim() || "العميل";
       const sit = document.getElementById("quickSituationInput").value.trim();
       if (!sit) return;
       const lower = sit.toLowerCase();
-      let targetAgentId = "writer";
-      if (lower.includes("متابع") || lower.includes("جدول") || lower.includes("يوم")) {
+      let targetAgentId = "simplifier";
+      if (lower.includes("بحث") || lower.includes("عملاء") || lower.includes("شرك")) {
+        targetAgentId = "researcher";
+      } else if (lower.includes("تدريب") || lower.includes("مهار")) {
+        targetAgentId = "trainer";
+      } else if (lower.includes("متابع") || lower.includes("جدول") || lower.includes("يوم")) {
         targetAgentId = "secretary";
-      } else if (lower.includes("ميزان") || lower.includes("سعر") || lower.includes("غالي") || lower.includes("محدود")) {
+      } else if (lower.includes("سعر") || lower.includes("عرض") || lower.includes("ميزان")) {
         targetAgentId = "writer";
       }
       selectAgentById(targetAgentId);
-      const composedTask = `العميل: ${cName}. الموقف/الطلب: ${sit}. اكتب رداً واضحاً ومختصراً يحفظ قيمة الخدمة وحق المطور ويقنع العميل عملياً.`;
+      const composedTask = `العميل/الموضوع: ${cName}. الموقف/الطلب: ${sit}. اكتب رداً سهلاً، واضحاً، ومختصراً جداً للتنفيذ الفوري.`;
       document.getElementById("quickSituationInput").value = "";
       await runForAgent(selectedAgent, composedTask);
     };
@@ -477,13 +679,80 @@ jobs:
     };
 
     document.getElementById("resetDataBtn").onclick = () => {
-      state = { chats: {}, approvals: [], leads: state.leads };
+      state = { chats: {}, approvals: [], leads: state.leads, trainingNotes: state.trainingNotes };
       saveState();
       renderChat();
       renderApprovals();
     };
 
-    // 3. قوالب الرسائل وأزرار الواتساب
+    // 3. فيصل — باحث العملاء
+    function updateResearchSearchLinks() {
+      const cType = document.getElementById("resCompanyType").value.trim() || "مختبرات تحاليل طبية";
+      const country = document.getElementById("resCountry").value.trim() || "اليمن";
+      const q = `${cType} ${country} واتساب`;
+      document.getElementById("googleSearchDirectBtn").href = "https://www.google.com/search?q=" + encodeURIComponent(q);
+      document.getElementById("mapsSearchDirectBtn").href = "https://www.google.com/maps/search/" + encodeURIComponent(`${cType} ${country}`);
+    }
+
+    ["resCompanyType", "resCountry"].forEach(id => {
+      document.getElementById(id).addEventListener("input", updateResearchSearchLinks);
+    });
+    updateResearchSearchLinks();
+
+    document.getElementById("runResearchBtn").onclick = async () => {
+      const cType = document.getElementById("resCompanyType").value.trim() || "منشآت خدمية وعيادات ومختبرات";
+      const traits = document.getElementById("resTraits").value.trim() || "تحتاج واجهة تفاعلية سريعة وحجز مباشر عبر واتساب";
+      const audience = document.getElementById("resAudience").value.trim() || "أصحاب المنشآت والمرضى والطلاب";
+      const country = document.getElementById("resCountry").value.trim() || "اليمن ودول الخليج";
+      updateResearchSearchLinks();
+
+      const resBox = document.getElementById("researchResultBox");
+      resBox.innerHTML = `<div class="msg ai">فيصل يجهّز قائمة الاستهداف وخطة البحث الآن...</div>`;
+
+      const researcher = AGENTS.find(a => a.id === "researcher");
+      const query = `اسم الشركة/النشاط: ${cType} | الصفات المطلوبة: ${traits} | الفئة المستهدفة: ${audience} | الدولة/المدينة: ${country}. جهّز قائمة استهداف عملية، وعبارات بحث دقيقة، وكيفية استخراج أرقام واتساب المناسبة.`;
+      const reply = await runForAgent(researcher, query);
+      if (reply) {
+        resBox.innerHTML = `<div class="msg ai"><div class="msg-text">${escapeHtml(reply)}</div></div>`;
+      } else {
+        resBox.innerHTML = `<div class="msg ai">تعذر إتمام البحث الآن، حاول مرة أخرى.</div>`;
+      }
+    };
+
+    // 4. نور — مدربة الموظفين
+    function populateTrainerSelect() {
+      const sel = document.getElementById("trainTargetAgent");
+      sel.innerHTML = AGENTS.filter(a => a.id !== "trainer")
+        .map(a => `<option value="${a.id}">${a.name}</option>`)
+        .join("");
+    }
+    populateTrainerSelect();
+
+    document.getElementById("runTrainBtn").onclick = async () => {
+      const targetId = document.getElementById("trainTargetAgent").value;
+      const focus = document.getElementById("trainFocusInput").value.trim() || "تحسين سرعة الإقناع والاختصار وحفظ حقوق المطور";
+      const targetAgent = AGENTS.find(a => a.id === targetId);
+      const trainer = AGENTS.find(a => a.id === "trainer");
+      if (!targetAgent || !trainer) return;
+
+      const tBox = document.getElementById("trainerResultBox");
+      tBox.innerHTML = `<div class="msg ai">نور تُعدّ التوجيه التدريبي لـ ${escapeHtml(targetAgent.name)}...</div>`;
+
+      const promptTask = `درّب الموظف (${targetAgent.name} — ${targetAgent.role}) على المهارة التالية: ${focus}. أعطني قاعدة تدريبية مركزة ومختصرة جداً تُضاف مباشرة إلى تعليمات عمله.`;
+      const reply = await runForAgent(trainer, promptTask);
+      if (reply) {
+        if (!state.trainingNotes[targetId]) state.trainingNotes[targetId] = [];
+        state.trainingNotes[targetId].push(reply);
+        saveState();
+        renderTeam();
+        tBox.innerHTML = `<div class="msg ai"><div class="msg-text"><strong>تم تحديث مهارات ${escapeHtml(targetAgent.name)} بنجاح:</strong>\n\n${escapeHtml(reply)}</div></div>`;
+        document.getElementById("trainFocusInput").value = "";
+      } else {
+        tBox.innerHTML = `<div class="msg ai">تعذر إتمام جلسة التدريب الآن، حاول مرة أخرى.</div>`;
+      }
+    };
+
+    // 6. قوالب الرسائل وأزرار الواتساب
     function getClientInputs() {
       const name = document.getElementById("clientName").value.trim() || "منشأتكم الموقرة";
       const link = document.getElementById("demoLink").value.trim() || DEFAULT_DEMO;
@@ -541,8 +810,8 @@ jobs:
       return `أهلاً بك أستاذ/دكتور ${name} 👋
 
 نقدّر تماماً ظروف الميزانية، ولهذا صمّمنا المسار بطريقة مرنة تحفظ قيمة العمل وتحقق لكم الفائدة دون إرهاق:
-• نبدأ أولاً بـ **تجربة مجانية لمدة 7 أيام** لتجربة النظام عملياً على أرض الواقع.
-• عند الاعتماد، نبدأ بـ **الباقة الأساسية الميسّرة** (بالأقسام والخدمات الأساسية وربط واتساب المباشر) بتكلفة تأسيس واضحة ومحددة مسبقاً دون أي رسوم خفية أو التزامات إضافية غير متفق عليها.
+• نبدأ أولاً بـ تجربة مجانية لمدة 7 أيام لتجربة النظام عملياً على أرض الواقع.
+• عند الاعتماد، نبدأ بـ الباقة الأساسية الميسّرة (بالأقسام والخدمات الأساسية وربط واتساب المباشر) بتكلفة تأسيس واضحة ومحددة مسبقاً دون أي رسوم خفية أو التزامات إضافية غير متفق عليها.
 • ويمكن إضافة أي ميزات أو تحديثات مستقبلية لاحقاً حسب نمو المنشأة.
 
 بهذا الشكل تبدؤون بأقل تكلفة ممكنة وتضمنون وضوح الحقوق والنتائج من اليوم الأول. هل نبدأ بتفعيل النسخة التجريبية لكم؟
@@ -605,39 +874,7 @@ jobs:
     document.getElementById("targetPhone").addEventListener("input", updateWaLinks);
     updateWaLinks();
 
-    // 7. الاستقبال الذكي للزوار
-    function buildIntakeGuide(type, region) {
-      const isLowResource = region.includes("محدودة");
-      const perfNote = isLowResource
-        ? "التركيز على واجهات خفيفة وسريعة جداً تعمل على الهواتف القديمة والأقل إمكانات وبأقل استهلاك للبيانات والإنترنت."
-        : "إمكانية إضافة معاينات تفاعلية متقدمة وتجربة سريعة فورية عبر المتصفح.";
-
-      if (type.includes("طالب")) {
-        return `مسار الاستقبال التلقائي — طالب أو باحث عن تعلم (${region}):
-• يحصل على شرح مبسّط وواضح وملخصات منظمة تدعم الفهم والمراجعة بسهولة.
-• ${perfNote}
-• يتم توجيهه للخطوة التعليمية المناسبة دون تعقيد أو إهدار للوقت.`;
-      }
-      if (type.includes("مساعدة")) {
-        return `مسار الاستقبال التلقائي — زائر يبحث عن مساعدة أو خدمة ميسّرة (${region}):
-• يتم توضيح الخيارات المتاحة بشكل مباشر وسهل الاستخدام بدون خطوات معقدة.
-• ${perfNote}
-• يُوجّه للتواصل المنظم عبر واتساب (00967737219181) أو البريد (omarebrah2060@gmail.com) لتجهيز طلبه.`;
-      }
-      return `مسار الاستقبال التلقائي — صاحب منشأة أو عيادة أو مكتب (${region}):
-• يرى فوراً كيف تعرض الصفحة خدماته وتسهّل حجز العملاء وتقليل أسئلة الاستقبال المتكررة.
-• ${perfNote}
-• يبدأ بتجربة مجانية لمدة 7 أيام ثم يختار الباقة المناسبة مع حفظ الحقوق المالية والشروط بوضوح.`;
-    }
-
-    document.getElementById("generateIntakeBtn").onclick = () => {
-      const t = document.getElementById("visitorType").value;
-      const r = document.getElementById("visitorRegion").value;
-      document.getElementById("intakeOutput").value = buildIntakeGuide(t, r);
-    };
-    document.getElementById("generateIntakeBtn").click();
-
-    // 5. قائمة العملاء المحتملين + تصدير CSV
+    // 7. قائمة العملاء المحتملين + تصدير CSV
     function renderLeads() {
       const body = document.getElementById("leadsBody");
       if (!state.leads.length) {
@@ -713,10 +950,7 @@ jobs:
       window.loadPresetDemo(lead.name, lead.demo || DEFAULT_DEMO, lead.phone);
     };
 
-    renderTeam();
-    renderChat();
-    renderApprovals();
-    renderLeads();
+    refreshAllViews();
   </script>
 </body>
 </html>
